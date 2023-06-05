@@ -4,4 +4,4 @@ project(cpplayground)
 set(CMAKE_CXX_STANDARD 14)
 
 add_executable(cpplayground
-        main.cpp Person.cpp)
+        main.cpp Person.cpp BigInt.h)

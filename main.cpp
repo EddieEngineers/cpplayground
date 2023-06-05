@@ -5,6 +5,7 @@
 #include <iostream>
 #include <vector>
 
+#include "bigint.h"
 #include "Person.h"
 
 using namespace std;
@@ -36,18 +37,18 @@ int projectEuler0001() {
     return answer;
 }
 
-vector<int> fibSeqToN(int n) {
+vector<bigint> fibSeqToN(int n) {
     if (n <= 0) {
-        return vector<int> {};
+        return vector<bigint> {};
     }
     else if (n == 1) {
-        return vector<int> {1};
+        return vector<bigint> {1};
     }
     else if (n == 2) {
-        return vector<int> {1, 1};
+        return vector<bigint> {1, 1};
     }
 
-    vector<int> seq{1, 1};
+    vector<bigint> seq{1, 1};
 
     while (seq.size() < n) {
         seq.push_back(seq.end()[-1] + seq.end()[-2]);
@@ -64,7 +65,7 @@ int main() {
 
     cout << projectEuler0001() << endl;
 
-    cout << fibSeqToN(5) << endl;
+    cout << fibSeqToN(100) << endl;
 
     return 0;
 }
